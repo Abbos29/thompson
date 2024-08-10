@@ -16,3 +16,24 @@ burger.addEventListener('click', () => {
 
 
 
+
+
+// SWIPER
+
+// SWIPER
+
+const swiperBranch = new Swiper('.branch__swiper', {
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 40,
+
+});
