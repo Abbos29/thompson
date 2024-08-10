@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Landing Page">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="icon" href="./img/favicon.svg">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <nav class="nav">
+
+            <a class="nav__logo" href="/">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+
+            <div class="nav__menu">
+                <a href="#">Главная</a>
+                <a href="#">О нас</a>
+                <a href="#">Филиалы</a>
+                <a href="#">Учебные программы</a>
+                <a href="#">Новости, объявления и Блог</a>
+                <a href="#">Наши проекты</a>
+            </div>
+
+            <button class="nav__theme">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.5 23.3327C19.0471 23.3327 20.5308 22.7181 21.6248 21.6241C22.7188 20.5302 23.3333 19.0464 23.3333 17.4993C23.3333 15.9523 22.7188 14.4685 21.6248 13.3746C20.5308 12.2806 19.0471 11.666 17.5 11.666V23.3327Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.5 2.91602C9.44564 2.91602 2.91668 9.44497 2.91668 17.4993C2.91668 25.5537 9.44564 32.0827 17.5 32.0827C25.5544 32.0827 32.0833 25.5537 32.0833 17.4993C32.0833 9.44497 25.5544 2.91602 17.5 2.91602ZM17.5 5.83268V11.666C15.9529 11.666 14.4692 12.2806 13.3752 13.3746C12.2813 14.4685 11.6667 15.9523 11.6667 17.4993C11.6667 19.0464 12.2813 20.5302 13.3752 21.6241C14.4692 22.7181 15.9529 23.3327 17.5 23.3327V29.166C20.5942 29.166 23.5617 27.9369 25.7496 25.7489C27.9375 23.561 29.1667 20.5935 29.1667 17.4993C29.1667 14.4052 27.9375 11.4377 25.7496 9.24977C23.5617 7.06185 20.5942 5.83268 17.5 5.83268Z"
+                        fill="white" />
+                </svg>
+
+            </button>
+
+            <button class="nav__burger">
+                <svg width="28" height="28" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_141_2792)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.98291 3.75C0.98291 3.55109 1.06193 3.36032 1.20258 3.21967C1.34323 3.07902 1.534 3 1.73291 3H16.2329C16.4318 3 16.6226 3.07902 16.7632 3.21967C16.9039 3.36032 16.9829 3.55109 16.9829 3.75C16.9829 3.94891 16.9039 4.13968 16.7632 4.28033C16.6226 4.42098 16.4318 4.5 16.2329 4.5H1.73291C1.534 4.5 1.34323 4.42098 1.20258 4.28033C1.06193 4.13968 0.98291 3.94891 0.98291 3.75ZM0.98291 8C0.98291 7.80109 1.06193 7.61032 1.20258 7.46967C1.34323 7.32902 1.534 7.25 1.73291 7.25H16.2329C16.4318 7.25 16.6226 7.32902 16.7632 7.46967C16.9039 7.61032 16.9829 7.80109 16.9829 8C16.9829 8.19891 16.9039 8.38968 16.7632 8.53033C16.6226 8.67098 16.4318 8.75 16.2329 8.75H1.73291C1.534 8.75 1.34323 8.67098 1.20258 8.53033C1.06193 8.38968 0.98291 8.19891 0.98291 8ZM1.73291 11.5C1.534 11.5 1.34323 11.579 1.20258 11.7197C1.06193 11.8603 0.98291 12.0511 0.98291 12.25C0.98291 12.4489 1.06193 12.6397 1.20258 12.7803C1.34323 12.921 1.534 13 1.73291 13H16.2329C16.4318 13 16.6226 12.921 16.7632 12.7803C16.9039 12.6397 16.9829 12.4489 16.9829 12.25C16.9829 12.0511 16.9039 11.8603 16.7632 11.7197C16.6226 11.579 16.4318 11.5 16.2329 11.5H1.73291Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_141_2792">
+                            <rect width="16" height="16" fill="white" transform="translate(0.98291)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <!-- Hero -->
+    <section class="hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1>Добро пожаловать в <span>Thompson School</span></h1>
+            <p>Уникальное учебное заведение, где каждый ученик получает индивидуальный подход и качественное
+                образование.</p>
+        </div>
+
+        <div class="hero__grid">
+            <div class="hero__grid-item item-1"></div>
+            <div class="hero__grid-item item-2"></div>
+            <div class="hero__grid-item item-3"></div>
+            <div class="hero__grid-item item-4"></div>
+            <div class="hero__grid-item item-5"></div>
+            <div class="hero__grid-item item-6"></div>
+            <div class="hero__grid-item item-7"></div>
+        </div>
+
+        <div class="hero__down">
+            <svg width="31" height="53" viewBox="0 0 31 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="30" height="52" rx="15" stroke="black" />
+                <line x1="15.5" y1="-2.18557e-08" x2="15.5" y2="19" stroke="black" />
+            </svg>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Test -->
+    
+
+
+
+    <!-- Main Page -->
+    <main></main>
+
+    <!-- Footer -->
+    
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>
