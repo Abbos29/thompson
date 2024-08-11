@@ -20,7 +20,6 @@ burger.addEventListener('click', () => {
 
 // SWIPER
 
-// SWIPER
 
 const swiperBranch = new Swiper('.branch__swiper', {
 
@@ -34,6 +33,6 @@ const swiperBranch = new Swiper('.branch__swiper', {
     },
 
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 140,
 
 });
