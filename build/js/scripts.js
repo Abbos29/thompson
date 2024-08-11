@@ -33,6 +33,13 @@ const swiperBranch = new Swiper('.branch__swiper', {
     slidesPerView: 1,
     spaceBetween: 140,
 
+    loop: true,
+
+    autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false, 
+      },
+
 });
 
 
@@ -49,6 +56,13 @@ const swiperReview = new Swiper('.reviews__swiper', {
 
     slidesPerView: 1,
     spaceBetween: 30,
+    autoHeight: true,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
 
     breakpoints: {
         1200: {
