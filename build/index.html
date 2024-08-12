@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Landing Page">
+    <meta name="description"
+        content="Уникальное учебное заведение, где каждый ученик получает индивидуальный подход и качественное образование">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Landing Page</title>
+    <title>Thompson School</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
@@ -18,13 +19,13 @@
         rel="stylesheet">
 
 
-    <link rel="icon" href="./img/favicon.svg">
+    <link rel="icon" href="./img/favicon.png">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="main__body">
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
     <div class="container">
         <nav class="nav">
 
@@ -33,11 +34,11 @@
             </a>
 
             <div class="nav__menu">
-                <a href="#">Главная</a>
-                <a href="#">О нас</a>
-                <a href="#">Филиалы</a>
-                <a href="#">Учебные программы</a>
-                <a href="#">Новости, объявления и Блог</a>
+                <a href="/">Главная</a>
+                <a href="/#about">О нас</a>
+                <a href="/#branch">Филиалы</a>
+                <a href="/#program">Учебные программы</a>
+                <a href="/#blog">Новости, объявления и Блог</a>
                 <a href="#">Наши проекты</a>
             </div>
 
@@ -72,8 +73,10 @@
     </div>
 </header>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Main Page -->
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="header">
     <div class="container">
         <div class="hero__wrapper">
             <h1>Добро пожаловать в <span>Thompson School</span></h1>
@@ -101,8 +104,8 @@
     </div>
 </section>
 
-    <!-- About -->
-    <section class="about">
+        <!-- About -->
+        <section class="about" id="about">
     <div class="container">
         <div class="about__wrapper">
 
@@ -137,8 +140,8 @@
     </div>
 </section>
 
-    <!-- Branch -->
-    <section class="branch">
+        <!-- Branch -->
+        <section class="branch" id="branch">
     <div class="container">
         <h2 class="section-title">Филиалы</h2>
 
@@ -294,8 +297,8 @@
     </div>
 </section>
 
-    <!-- Program -->
-    <section class="program">
+        <!-- Program -->
+        <section class="program" id="program">
     <div class="container">
         <div class="program__title">
             <h2 class="section-title">Наша программа</h2>
@@ -306,8 +309,8 @@
     </div>
 </section>
 
-    <!-- Ways -->
-    <section class="ways">
+        <!-- Ways -->
+        <section class="ways" id="ways">
     <div class="container">
         <div class="ways__wrapper">
             <h2 class="section-title">Основные направления:</h2>
@@ -342,8 +345,50 @@
     </div>
 </section>
 
-    <!-- Reviews -->
-    <section class="reviews">
+        <!-- Blog -->
+        <section class="blog" id="blog">
+    <div class="container">
+        <div class="blog__title">
+            <h2 class="section-title">Блог о школе</h2>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.</p>
+        </div>
+
+        <div class="blog__grid">
+            <div class="blog__banner">
+                <img class="blog__banner-img" src="./img/blog-banner.jpg" alt="img">
+
+                <div class="blog__banner-box">
+                    <h3>Соревнования между филиалами</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.</p>
+                    <div class="blog__banner-inner">
+                        <img src="./img/blog-inner-1.jpg" alt="img">
+                        <img src="./img/blog-inner-2.jpg" alt="img">
+                        <img src="./img/blog-inner-2.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog__card card-1">
+                <h3>Соревнования между филиалами</h3>
+            </div>
+
+            <div class="blog__card card-2">
+                <h3>Соревнования между филиалами</h3>
+            </div>
+
+            <div class="blog__card card-3">
+                <h3>Соревнования между филиалами</h3>
+            </div>
+
+            <div class="blog__card card-4">
+                <h3>Соревнования между филиалами</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Reviews -->
+        <section class="reviews" id="reviews">
     <div class="container">
         <div class="reviews__title">
             <h2 class="sectiont-title">Отзывы</h2>
@@ -427,8 +472,8 @@
     </div>
 </section>
 
-    <!-- News -->
-    <section class="news">
+        <!-- News -->
+        <section class="news" id="news">
     <div class="container">
         <div class="news__title">
             <h2 class="section-title">Объявления и Новости</h2>
@@ -482,8 +527,8 @@
     </div>
 </section>
 
-    <!-- Contact -->
-    <section class="contact">
+        <!-- Contact -->
+        <section class="contact" id="contact">
     <div class="container">
         <div class="contact__title">
             <h2 class="section-title">Форма обратной связи</h2>
@@ -546,16 +591,33 @@
     </div>
 </section>
 
-    <!-- Test -->
-    
-
-
-
-    <!-- Main Page -->
-    <main></main>
+        <!-- Test -->
+        
+    </main>
 
     <!-- Footer -->
-    
+    <footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="/">
+                <img class="footer__logo" src="./img/footer-logo.png" alt="logo">
+            </a>
+
+            <div class="footer__menu">
+                <a class="link" href="/">Главная</a>
+                <a class="link" href="/#about">О нас</a>
+                <a class="link" href="/#branch">Филиалы</a>
+                <a class="link" href="/#program">Учебные программы</a>
+                <a class="link" href="/#blog">Новости, объявления и Блог</a>
+                <a class="link" href="#">Наши проекты</a>
+            </div>
+
+            <p class="footer__copy">
+                Copyright © 2023 BRIX <br> Templates | All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer>
 
 </body>
 

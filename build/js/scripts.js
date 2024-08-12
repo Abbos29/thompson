@@ -4,14 +4,19 @@
 
 
 // burger menu
-
-const menu = document.querySelector('.nav__menu')
-const burger = document.querySelector('.nav__burger')
-
+const menu = document.querySelector('.nav__menu');
+const burger = document.querySelector('.nav__burger');
+const menuLinks = menu.querySelectorAll('a'); 
 
 burger.addEventListener('click', () => {
-    menu.classList.toggle('active')
-})
+    menu.classList.toggle('active');
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active'); 
+    });
+});
 
 
 
@@ -36,9 +41,9 @@ const swiperBranch = new Swiper('.branch__swiper', {
     loop: true,
 
     autoplay: {
-        delay: 3000, 
-        disableOnInteraction: false, 
-      },
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 
 });
 
@@ -61,7 +66,7 @@ const swiperReview = new Swiper('.reviews__swiper', {
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
-      },
+    },
 
 
     breakpoints: {
