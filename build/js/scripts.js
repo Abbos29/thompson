@@ -6,7 +6,7 @@
 // burger menu
 const menu = document.querySelector('.nav__menu');
 const burger = document.querySelector('.nav__burger');
-const menuLinks = menu.querySelectorAll('a'); 
+const menuLinks = menu.querySelectorAll('a');
 
 burger.addEventListener('click', () => {
     menu.classList.toggle('active');
@@ -14,7 +14,7 @@ burger.addEventListener('click', () => {
 
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-        menu.classList.remove('active'); 
+        menu.classList.remove('active');
     });
 });
 
@@ -84,3 +84,49 @@ const swiperReview = new Swiper('.reviews__swiper', {
     }
 
 });
+
+
+
+
+
+// HERO SWIPERS
+
+// Function to initialize each Swiper
+function initializeSwiper(swiperClass) {
+    new Swiper(swiperClass, {
+        loop: true, // Enable looping
+        effect: 'fade', // Apply fade effect
+        fadeEffect: {
+            crossFade: true, // Smooth crossfade between slides
+        },
+        autoplay: {
+            delay: 5000, // 1-second delay between slides
+            disableOnInteraction: false, // Continue autoplay after user interactions
+        },
+        speed: 5000, // 1-second transition speed
+        allowTouchMove: false
+    });
+}
+
+// Initialize each swiper slider
+initializeSwiper('.swiper-hero-1');
+initializeSwiper('.swiper-hero-2');
+initializeSwiper('.swiper-hero-3');
+initializeSwiper('.swiper-hero-4');
+initializeSwiper('.swiper-hero-5');
+initializeSwiper('.swiper-hero-6');
+initializeSwiper('.swiper-hero-7');
+
+
+
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    
+    if (window.innerWidth > 1300 && window.scrollY > 20) {
+        header.classList.add('header__open');
+    } else {
+        header.classList.remove('header__open');
+    }
+});
+
