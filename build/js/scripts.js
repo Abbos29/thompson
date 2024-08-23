@@ -87,6 +87,36 @@ const swiperReview = new Swiper('.reviews__swiper', {
 
 
 
+// BRANCH ITEM SWIPER
+
+const swiperBranchItem = new Swiper('.branch-item__swiper', {
+
+
+    navigation: {
+        nextEl: '.swiper-button-next.branch-item-next',
+        prevEl: '.swiper-button-prev.branch-item-prev',
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    breakpoints: {
+        1150: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        480: {
+            slidesPerView: 2,
+        }
+    }
+});
+
+
+
 
 
 // HERO SWIPERS
@@ -119,10 +149,10 @@ initializeSwiper('.swiper-hero-7');
 
 
 
-
-window.addEventListener('scroll', function() {
+// HEADER SCROLL VISIBLE
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
-    
+
     if (window.innerWidth > 1300 && window.scrollY > 20) {
         header.classList.add('header__open');
     } else {
