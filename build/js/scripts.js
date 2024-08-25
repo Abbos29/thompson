@@ -160,3 +160,13 @@ window.addEventListener('scroll', function () {
     }
 });
 
+window.addEventListener('mousemove', function (e) {
+    const header = document.querySelector('.header');
+    
+    if (window.innerWidth > 1300 && e.clientY <= 70) {
+        header.classList.add('header__open');
+    } else if (window.scrollY <= 20) {
+        header.classList.remove('header__open');
+    }
+});
+

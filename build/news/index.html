@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Уникальное учебное заведение, где каждый ученик получает индивидуальный подход и качественное образование">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Новости, объявления и Блог</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body class="main__body">
+    <!-- Header -->
+    <header class="header" id="header">
+    <div class="container">
+        <nav class="nav">
+
+            <a class="nav__logo" href="/">
+                <img src="../img/logo.svg" alt="logo">
+            </a>
+
+            <div class="nav__menu">
+                <a href="#">Главная</a>
+                <a href="#">О нас</a>
+                <a href="#">Филиалы</a>
+                <a href="#">Учебные программы</a>
+                <a href="#">Новости, объявления и Блог</a>
+                <a href="#">Наши проекты</a>
+            </div>
+
+            <!-- <button class="nav__theme">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.5 23.3327C19.0471 23.3327 20.5308 22.7181 21.6248 21.6241C22.7188 20.5302 23.3333 19.0464 23.3333 17.4993C23.3333 15.9523 22.7188 14.4685 21.6248 13.3746C20.5308 12.2806 19.0471 11.666 17.5 11.666V23.3327Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.5 2.91602C9.44564 2.91602 2.91668 9.44497 2.91668 17.4993C2.91668 25.5537 9.44564 32.0827 17.5 32.0827C25.5544 32.0827 32.0833 25.5537 32.0833 17.4993C32.0833 9.44497 25.5544 2.91602 17.5 2.91602ZM17.5 5.83268V11.666C15.9529 11.666 14.4692 12.2806 13.3752 13.3746C12.2813 14.4685 11.6667 15.9523 11.6667 17.4993C11.6667 19.0464 12.2813 20.5302 13.3752 21.6241C14.4692 22.7181 15.9529 23.3327 17.5 23.3327V29.166C20.5942 29.166 23.5617 27.9369 25.7496 25.7489C27.9375 23.561 29.1667 20.5935 29.1667 17.4993C29.1667 14.4052 27.9375 11.4377 25.7496 9.24977C23.5617 7.06185 20.5942 5.83268 17.5 5.83268Z"
+                        fill="white" />
+                </svg>
+
+            </button> -->
+
+            <button class="nav__burger">
+                <svg width="28" height="28" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_141_2792)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.98291 3.75C0.98291 3.55109 1.06193 3.36032 1.20258 3.21967C1.34323 3.07902 1.534 3 1.73291 3H16.2329C16.4318 3 16.6226 3.07902 16.7632 3.21967C16.9039 3.36032 16.9829 3.55109 16.9829 3.75C16.9829 3.94891 16.9039 4.13968 16.7632 4.28033C16.6226 4.42098 16.4318 4.5 16.2329 4.5H1.73291C1.534 4.5 1.34323 4.42098 1.20258 4.28033C1.06193 4.13968 0.98291 3.94891 0.98291 3.75ZM0.98291 8C0.98291 7.80109 1.06193 7.61032 1.20258 7.46967C1.34323 7.32902 1.534 7.25 1.73291 7.25H16.2329C16.4318 7.25 16.6226 7.32902 16.7632 7.46967C16.9039 7.61032 16.9829 7.80109 16.9829 8C16.9829 8.19891 16.9039 8.38968 16.7632 8.53033C16.6226 8.67098 16.4318 8.75 16.2329 8.75H1.73291C1.534 8.75 1.34323 8.67098 1.20258 8.53033C1.06193 8.38968 0.98291 8.19891 0.98291 8ZM1.73291 11.5C1.534 11.5 1.34323 11.579 1.20258 11.7197C1.06193 11.8603 0.98291 12.0511 0.98291 12.25C0.98291 12.4489 1.06193 12.6397 1.20258 12.7803C1.34323 12.921 1.534 13 1.73291 13H16.2329C16.4318 13 16.6226 12.921 16.7632 12.7803C16.9039 12.6397 16.9829 12.4489 16.9829 12.25C16.9829 12.0511 16.9039 11.8603 16.7632 11.7197C16.6226 11.579 16.4318 11.5 16.2329 11.5H1.73291Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_141_2792">
+                            <rect width="16" height="16" fill="white" transform="translate(0.98291)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <!-- Main Page -->
+    <main>
+
+        <!-- New -->
+        <section class="new">
+    <div class="container">
+        <div class="crumbs">
+            <a href="/">Главная</a>
+            <span>></span>
+            <a href="/">Новости, объявления и Блог</a>
+            <span>></span>
+            <p>Вручения диплома</p>
+        </div>
+
+        <div class="new__wrapper">
+            <div class="new__inner">
+                <div class="new__img">
+                    <img src="../img/new-img.jpg" alt="new-img">
+
+                    <div>
+                        <button>
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.2366 3.7002C16.1799 3.7002 14.3546 4.51201 13.118 5.90736C11.8813 4.51201 10.056 3.7002 7.9993 3.7002C6.208 3.70236 4.49068 4.41492 3.22404 5.68156C1.9574 6.9482 1.24484 8.66552 1.24268 10.4568C1.24268 17.8625 12.0748 23.7797 12.5355 24.0284C12.7145 24.1248 12.9146 24.1753 13.118 24.1753C13.3213 24.1753 13.5214 24.1248 13.7005 24.0284C14.1611 23.7797 24.9932 17.8625 24.9932 10.4568C24.9911 8.66552 24.2785 6.9482 23.0119 5.68156C21.7452 4.41492 20.0279 3.70236 18.2366 3.7002ZM17.6746 18.274C16.2488 19.4839 14.7246 20.5728 13.118 21.5295C11.5113 20.5728 9.98711 19.4839 8.56133 18.274C6.3429 16.3709 3.69963 13.4686 3.69963 10.4568C3.69963 9.31648 4.15263 8.22284 4.95898 7.41649C5.76532 6.61015 6.85896 6.15715 7.9993 6.15715C9.82154 6.15715 11.3469 7.11946 11.9806 8.66939C12.0728 8.89533 12.2303 9.08869 12.4328 9.22479C12.6354 9.3609 12.8739 9.43358 13.118 9.43358C13.362 9.43358 13.6005 9.3609 13.8031 9.22479C14.0057 9.08869 14.1631 8.89533 14.2553 8.66939C14.889 7.11946 16.4144 6.15715 18.2366 6.15715C19.377 6.15715 20.4706 6.61015 21.2769 7.41649C22.0833 8.22284 22.5363 9.31648 22.5363 10.4568C22.5363 13.4686 19.893 16.3709 17.6746 18.274Z"
+                                    fill="#CA4B40" />
+                            </svg>
+
+                        </button>
+
+                        <button>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.252 12.0146L13.852 5.01465V8.51465C10.652 8.51465 4.25195 10.6146 4.25195 19.0146C4.25195 17.8476 6.17195 15.5146 13.852 15.5146V19.0146L20.252 12.0146Z"
+                                    stroke="#CA4B40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Поделиться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="new__content">
+                    <h3>Вручения диплома</h3>
+                    <h4>20.08.2024</h4>
+                    <p>SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum
+                        tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum
+                        tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons
+                        elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m
+                        tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
+                        dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
+                        dalar cons </p>
+                </div>
+            </div>
+
+            <p>Semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur SASMO - Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementum tempus hac.Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar cons elementuadipiscing elit semper dalar cons elementum tempus hac. hacm tempus hac. onsecte tur m tempus hac. onsecte tur </p>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- News -->
+        <section class="news" id="news">
+    <div class="container">
+        <div class="news__title">
+            <h2 class="section-title">Объявления и Новости</h2>
+            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada
+                quam commodo id integer nam.</p>
+        </div>
+
+        <div class="news__wrapper">
+
+
+            <div class="news__cards">
+
+
+                <a class="news__link" href="#">
+                    <div class="news__banner">
+                        <div>
+                            <h3>20.08.2024</h3>
+                            <h2>Вручения диплома</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore earum magni culpa
+                                nostrum ab facere?</p>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a class="news__link" href="#">
+
+                    <div class="news__card">
+                        <div>
+                            <h3>04.12.2023</h3>
+                            <h2>Соревнования между филиалами соревнования между филиалами соревнования между
+                                филиалами
+                                соревнования между филиалами </h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti error nesciunt
+                                asperiores molestias, unde minima.</p>
+                        </div>
+
+                        <img src="../img/news-card-1.png" alt="img">
+                    </div>
+
+                </a>
+
+                <a class="news__link" href="#">
+                    <div class="news__card">
+                        <div>
+                            <h3>04.12.2023</h3>
+                            <h2>Соревнования между филиалами соревнования между филиалами соревнования между филиалами
+                                соревнования между филиалами </h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolor quisquam laboriosam
+                                fuga sequi ea.</p>
+                        </div>
+
+                        <img src="../img/news-card-1.png" alt="img">
+                    </div>
+                </a>
+
+
+                <a class="news__link" href="#">
+                    <div class="news__card">
+                        <div>
+                            <h3>04.12.2023</h3>
+                            <h2>Соревнования между филиалами соревнования между филиалами соревнования между филиалами
+                                соревнования между филиалами </h2>
+
+                        </div>
+
+                        <img src="../img/news-card-1.png" alt="img">
+                    </div>
+
+                </a>
+            </div>
+
+
+            <h5 class="news__more-btn">Больше</h5>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="/">
+                <img class="footer__logo" src="../img/footer-logo.png" alt="logo">
+            </a>
+
+            <div class="footer__menu">
+                <a class="link" href="/">Главная</a>
+                <a class="link" href="/#about">О нас</a>
+                <a class="link" href="/#branch">Филиалы</a>
+                <a class="link" href="/#program">Учебные программы</a>
+                <a class="link" href="/#blog">Новости, объявления и Блог</a>
+                <a class="link" href="#">Наши проекты</a>
+            </div>
+
+            <p class="footer__copy">
+                Copyright © 2023 BRIX <br> Templates | All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script src="../js/scripts.min.js"></script>
+
+</html>
