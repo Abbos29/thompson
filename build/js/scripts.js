@@ -116,6 +116,45 @@ const swiperBranchItem = new Swiper('.branch-item__swiper', {
 });
 
 
+// SWIPER
+
+const swiperWhat = new Swiper('.swiper__what', {
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next.what-next',
+      prevEl: '.swiper-button-prev.what-prev',
+    },
+  
+    // initialSlide: 3,
+    // centeredSlides: true,
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    
+    breakpoints: {
+      1450: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 2.5,
+      }
+    }
+  });
+
+
 
 
 
