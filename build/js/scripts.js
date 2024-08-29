@@ -119,16 +119,16 @@ const swiperBranchItem = new Swiper('.branch-item__swiper', {
 // SWIPER
 
 const swiperWhat = new Swiper('.swiper__what', {
-  
+
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  
+
     navigation: {
-      nextEl: '.swiper-button-next.what-next',
-      prevEl: '.swiper-button-prev.what-prev',
+        nextEl: '.swiper-button-next.what-next',
+        prevEl: '.swiper-button-prev.what-prev',
     },
-  
+
     // initialSlide: 3,
     // centeredSlides: true,
     grabCursor: true,
@@ -138,21 +138,21 @@ const swiperWhat = new Swiper('.swiper__what', {
     autoplay: {
         delay: 3000,
     },
-    
+
     breakpoints: {
-      1450: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      992: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 2.5,
-      }
+        1450: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2.5,
+        }
     }
-  });
+});
 
 
 
@@ -201,7 +201,7 @@ window.addEventListener('scroll', function () {
 
 window.addEventListener('mousemove', function (e) {
     const header = document.querySelector('.header');
-    
+
     if (window.innerWidth > 1300 && e.clientY <= 70) {
         header.classList.add('header__open');
     } else if (window.scrollY <= 20) {
@@ -209,3 +209,52 @@ window.addEventListener('mousemove', function (e) {
     }
 });
 
+
+
+
+
+// TELEGRAM
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+
+    const message = `Имя: ${name}\nТелефон: ${phone}`;
+    const token = '7415302846:AAFIOKBJ_q1dNe-km5nPjch6cS9ZzpfJ4vo';
+    const chatId = '-4543171734';
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    const data = {
+        chat_id: chatId,
+        text: message,
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Сообщение успешно отправлено!');
+                // window.location()
+
+                location.reload()
+            } else {
+                alert('Ошибка при отправке сообщения.');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Ошибка при отправке сообщения.');
+        });
+});
+
+
+
+
+ё
