@@ -87,33 +87,7 @@ const swiperReview = new Swiper('.reviews__swiper', {
 
 
 
-// BRANCH ITEM SWIPER
 
-const swiperBranchItem = new Swiper('.branch-item__swiper', {
-
-
-    navigation: {
-        nextEl: '.swiper-button-next.branch-item-next',
-        prevEl: '.swiper-button-prev.branch-item-prev',
-    },
-
-    slidesPerView: 1,
-    spaceBetween: 20,
-
-    breakpoints: {
-        1150: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        480: {
-            slidesPerView: 2,
-        }
-    }
-});
 
 
 // SWIPER
@@ -213,48 +187,129 @@ window.addEventListener('mousemove', function (e) {
 
 
 
-// TELEGRAM
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
 
-    const message = `Имя: ${name}\nТелефон: ${phone}`;
-    const token = '7415302846:AAFIOKBJ_q1dNe-km5nPjch6cS9ZzpfJ4vo';
-    const chatId = '-4543171734';
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    const data = {
-        chat_id: chatId,
-        text: message,
-    };
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
+
+
+
+
+// BRANCHES TABS
+const branches = {
+    novza: {
+        images: [
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-2.png',
+        ]
+    },
+    navoi: {
+        images: [
+            '../img/branch-item-2.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-1.png',
+        ]
+    },
+    uchtepa: {
+        images: [
+            '../img/branch-item-3.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-4.png',
+            '../img/branch-item-1.png',
+            '../img/branch-item-2.png',
+            '../img/branch-item-3.png',
+            '../img/branch-item-4.png',
+        ]
+    }
+};
+
+function updateSlider(images) {
+    const swiperWrapper = document.querySelector('.branch-item .swiper-wrapper');
+    swiperWrapper.innerHTML = ''; 
+
+    images.forEach(image => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${image}" alt="img">`;
+        swiperWrapper.appendChild(slide);
+    });
+
+    swiperBranchItem.update();
+}
+
+document.querySelectorAll('.our__card').forEach((card) => {
+    card.addEventListener('click', () => {
+        document.querySelectorAll('.our__card').forEach(card => card.classList.remove('active'));
+        
+        card.classList.add('active');
+        
+        const branchName = card.getAttribute('data-branch');
+        
+        document.querySelector('#branch-name span').textContent = branchName;
+        
+        updateSlider(branches[branchName.toLowerCase()].images);
+    });
+});
+
+// BRANCH ITEM SWIPER
+
+const swiperBranchItem = new Swiper('.branch-item__swiper', {
+
+
+    navigation: {
+        nextEl: '.swiper-button-next.branch-item-next',
+        prevEl: '.swiper-button-prev.branch-item-prev',
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    breakpoints: {
+        1150: {
+            slidesPerView: 4,
+            spaceBetween: 30,
         },
-        body: JSON.stringify(data),
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Сообщение успешно отправлено!');
-                // window.location()
-
-                location.reload()
-            } else {
-                alert('Ошибка при отправке сообщения.');
-            }
-        })
-        .catch(error => {
-            console.error('Ошибка:', error);
-            alert('Ошибка при отправке сообщения.');
-        });
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        480: {
+            slidesPerView: 2,
+        }
+    }
 });
 
 
 
 
-ё
+// NEW html btns
+document.querySelectorAll('.new__btns button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        // document.querySelectorAll('.new__btns button').forEach(btn => btn.classList.remove('active'));
+        
+        // Add 'active' class to the clicked button
+        button.classList.toggle('active');
+    });
+});

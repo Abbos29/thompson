@@ -1124,9 +1124,9 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 30px;
   -webkit-transition: all 0.3s allow-discrete;
   -o-transition: all 0.3s allow-discrete;
@@ -1198,9 +1198,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .news__more-btn:hover {
-  scale: 1.1;
-  -webkit-filter: drop-shadow(1px 1px 10px black);
-          filter: drop-shadow(1px 1px 10px black);
+  color: #CA4B40;
 }
 
 .contact {
@@ -1574,12 +1572,24 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.our__card.active {
+  background-color: #CA4B40;
+}
+
+.our__card.active h4 {
+  color: #dbdbdb;
+}
+
+.our__card.active h3 {
+  color: #fff;
+}
+
 .our__card:hover {
   background-color: #CA4B40;
 }
 
 .our__card:hover h4 {
-  color: #DBDBDB;
+  color: #dbdbdb;
 }
 
 .our__card:hover h3 {
@@ -1620,23 +1630,21 @@ body::-webkit-scrollbar-thumb {
 .branch-item__title {
   max-width: 850px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .branch-item__swiper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 18px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .branch-item__swiper .swiper-slide img {
   width: 100%;
-  height: 100%;
+  height: 450px;
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1703,6 +1711,19 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.259);
+          box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.259);
+}
+
+.map__item:hover {
+  background-color: #fff;
+  border: 1px solid #8c87db;
+  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.259);
+          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.259);
 }
 
 .map__item p {
@@ -2044,6 +2065,22 @@ body::-webkit-scrollbar-thumb {
           box-shadow: 0 0 20px 1px rgba(255, 0, 0, 0.4);
 }
 
+.new__img div button svg,
+.new__img div button path {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.new__img div button.active {
+  background-color: #CA4B40;
+  color: #fff;
+}
+
+.new__img div button.active svg path {
+  fill: #fff;
+}
+
 .new__img div button:first-child {
   width: 55px;
   height: 55px;
@@ -2056,13 +2093,9 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s;
 }
 
-.new__img div button:first-child:active {
-  background-color: #CA4B40;
-  color: #fff;
-}
-
-.new__img div button:first-child:active svg path {
-  fill: #fff;
+.new__img div button:last-child.active path {
+  stroke: #fff;
+  fill: #CA4B40;
 }
 
 .new__content {
@@ -2467,6 +2500,10 @@ body::-webkit-scrollbar-thumb {
 
   .our__card {
     min-width: 260px;
+  }
+
+  .branch-item__swiper .swiper-slide img {
+    height: 300px;
   }
 
   .branch-item__swiper-btns {
