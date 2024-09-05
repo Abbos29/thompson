@@ -2263,6 +2263,99 @@ body::-webkit-scrollbar-thumb {
   text-align: left;
 }
 
+.honor {
+  /* .honor__wrapper */
+  /* .honor__item */
+  /* .honor__inner */
+}
+
+.honor__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  overflow-y: hidden;
+  overflow-x: unset;
+  /* width */
+}
+
+.honor__wrapper::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+.honor__item {
+  background-color: #CA4B40;
+  color: #ffeae8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+  padding: 15px 19px;
+  border-radius: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.honor__item img {
+  margin-bottom: 15px;
+}
+
+.honor__item h3 {
+  font-size: clamp(1.25rem, 1.147rem + 0.39vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.honor__item h4 {
+  font-size: clamp(1rem, 0.949rem + 0.2vw, 1.125rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.honor__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding-top: 80px;
+  position: relative;
+}
+
+.honor__inner img:nth-child(2) {
+  position: absolute;
+  top: 100px;
+  right: -5%;
+}
+
+.honor__inner h2 {
+  margin-top: 30px;
+}
+
+.honor__inner p {
+  text-align: left;
+}
+
 .footer {
   background-color: #280404;
   padding: 35px 0;
@@ -2721,6 +2814,10 @@ body::-webkit-scrollbar-thumb {
     left: auto;
     width: 200px;
     height: 200px;
+    display: none;
+  }
+
+  .honor__inner img:nth-child(2) {
     display: none;
   }
 }
