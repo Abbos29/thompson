@@ -137,6 +137,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-image: url(../img/body-bg.png);
+}
+
 body:has(.hero-2) .header {
   position: absolute;
   top: 0;
@@ -153,7 +157,7 @@ section {
 }
 
 .section-title {
-  font-size: clamp(1.875rem, 1.607rem + 1.02vw, 2.1rem);
+  font-size: clamp(1.875rem, 1.607rem + 1.02vw, 1.8rem);
   font-weight: 700;
   line-height: 1.1;
   text-align: center;
@@ -162,7 +166,7 @@ section {
 }
 
 .section-text {
-  font-size: clamp(1rem, 0.893rem + 0.41vw, 1.25rem);
+  font-size: clamp(1rem, 0.893rem + 0.3vw, 1rem);
   font-weight: 400;
   line-height: 2;
   text-align: center;
@@ -207,7 +211,7 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: clamp(0.875rem, 0.714rem + 0.61vw, 1.25rem);
+  font-size: clamp(0.875rem, 0.714rem + 0.5vw, 1rem);
 }
 
 .crumbs a {
@@ -303,7 +307,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-  padding: 25px 0;
+  padding: 15px 0;
   width: 100%;
   position: relative;
   z-index: 9;
@@ -480,7 +484,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero__main h1 {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: clamp(1.75rem, 1.238rem + 2.16vw, 3.125rem);
+  font-size: clamp(1.75rem, 1.338rem + 2.26vw, 3.025rem);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -492,15 +496,15 @@ body::-webkit-scrollbar-thumb {
 
 .hero__main p {
   font-family: "Comfortaa", sans-serif;
-  font-size: clamp(0.875rem, 0.735rem + 0.59vw, 1.25rem);
+  font-size: clamp(0.875rem, 0.735rem + 0.59vw, 1rem);
   font-weight: 400;
   line-height: 2;
   color: #526B7A;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .hero__main button {
-  padding: 20px 30px;
+  padding: 14px 20px;
 }
 
 .hero__grid {
@@ -636,6 +640,15 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.hero__main-img {
+  width: 100%;
+}
+
+.hero__main-swiper {
+  max-width: 500px;
+  width: 100%;
+}
+
 .about {
   /* .about__wrapper */
   /* .about__title */
@@ -644,9 +657,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about__wrapper {
+  background-color: #fff;
   -webkit-box-shadow: 0px 4px 56.9px -7px #8d88dc40;
           box-shadow: 0px 4px 56.9px -7px #8d88dc40;
-  padding: clamp(1.875rem, 1.071rem + 3.06vw, 3.75rem) clamp(1.25rem, -0.893rem + 8.16vw, 6.25rem);
+  padding: clamp(1.875rem, 1.071rem + 3.06vw, 2.45rem) clamp(1.25rem, -0.893rem + 8.16vw, 4.25rem);
   border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,7 +669,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 60px;
+  gap: 30px;
 }
 
 .about__inner {
@@ -680,13 +694,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about__card h3 {
-  font-size: clamp(1.5rem, 1.286rem + 0.82vw, 2rem);
+  font-size: clamp(1.5rem, 1.286rem + 0.82vw, 1.6rem);
   font-weight: 700;
   line-height: 1.2;
 }
 
 .about__card p {
-  font-size: clamp(1rem, 0.839rem + 0.61vw, 1.375rem);
+  font-size: clamp(1rem, 0.839rem + 0.61vw, 1.075rem);
   font-weight: 400;
   line-height: 1.3;
   color: #526B7A;
@@ -1198,23 +1212,12 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s allow-discrete;
 }
 
-.news__card:hover p {
-  display: block;
-  opacity: 1;
-  -webkit-transition: all 0.3s allow-discrete;
-  -o-transition: all 0.3s allow-discrete;
-  transition: all 0.3s allow-discrete;
-}
-
 .news__card p {
   color: #000;
   z-index: 3;
-  display: none;
-  opacity: 0;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  overflow: hidden;
   margin-top: 10px;
   font-size: 19px;
   width: 80%;
@@ -1222,6 +1225,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-transition: all 0.3s allow-discrete;
   -o-transition: all 0.3s allow-discrete;
   transition: all 0.3s allow-discrete;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .news__card h3 {
@@ -1237,6 +1244,10 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   line-height: 1.2;
   margin-top: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .news__more-btn {
@@ -2481,6 +2492,36 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 100px;
 }
 
+.team__inner {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.team__inner > div {
+  width: 40px;
+  height: 40px;
+  background-color: #CA4B40;
+}
+
+.team__inner h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.team__inner p {
+  line-height: 1.3;
+}
+
 .footer {
   background-color: #280404;
   padding: 35px 0;
@@ -2519,7 +2560,7 @@ body::-webkit-scrollbar-thumb {
 .footer__menu a {
   color: #fff;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: clamp(0.938rem, 0.841rem + 0.37vw, 1.125rem);
+  font-size: clamp(0.938rem, 0.741rem + 0.37vw, 1.125rem);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -2536,7 +2577,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   color: #fff;
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: clamp(0.938rem, 0.841rem + 0.37vw, 1.125rem);
+  font-size: clamp(0.938rem, 0.641rem + 0.37vw, 1.125rem);
   font-weight: 400;
   line-height: 1.4;
   margin: 0 auto;
@@ -2693,7 +2734,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .hero__main p {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .hero__grid .item-4 .swiper {

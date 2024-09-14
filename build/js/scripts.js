@@ -129,6 +129,54 @@ const swiperWhat = new Swiper('.swiper__what', {
 });
 
 
+// SWIPER HERO MAIN
+
+const swiperHeroMain = new Swiper('.hero__main-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+
+
+
+// SWIPER HONOR
+
+const swiper = new Swiper('.honor__swiper', {
+
+    grabCursor: true,
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    freeMode: true,
+    freeModeMomentum: true, // инерция при свободном скролле
+    mousewheel: true, // прокрутка колесом мыши
+
+    autoplay: {
+        delay: 500, // Задержка между автопрокруткой (в миллисекундах)
+        disableOnInteraction: false, // Продолжает автопрокрутку после взаимодействия
+    },
+    speed: 10000, // Скорость перехода (в миллисекундах)
+
+
+    breakpoints: {
+        1450: {
+            slidesPerView: 4.4,
+            spaceBetween: 40,
+        },
+        992: {
+            slidesPerView: 3.8,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2.2,
+        }
+    }
+});
+
 
 
 
@@ -246,7 +294,7 @@ const branches = {
 
 function updateSlider(images) {
     const swiperWrapper = document.querySelector('.branch-item .swiper-wrapper');
-    swiperWrapper.innerHTML = ''; 
+    swiperWrapper.innerHTML = '';
 
     images.forEach(image => {
         const slide = document.createElement('div');
@@ -261,13 +309,13 @@ function updateSlider(images) {
 document.querySelectorAll('.our__card').forEach((card) => {
     card.addEventListener('click', () => {
         document.querySelectorAll('.our__card').forEach(card => card.classList.remove('active'));
-        
+
         card.classList.add('active');
-        
+
         const branchName = card.getAttribute('data-branch');
-        
+
         document.querySelector('#branch-name span').textContent = branchName;
-        
+
         updateSlider(branches[branchName.toLowerCase()].images);
     });
 });
@@ -308,7 +356,7 @@ document.querySelectorAll('.new__btns button').forEach(button => {
     button.addEventListener('click', () => {
         // Remove 'active' class from all buttons
         // document.querySelectorAll('.new__btns button').forEach(btn => btn.classList.remove('active'));
-        
+
         // Add 'active' class to the clicked button
         button.classList.toggle('active');
     });
