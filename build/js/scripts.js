@@ -231,8 +231,24 @@ window.addEventListener('mousemove', function (e) {
     }
 });
 
+// window.onload = function () {
+//     if (window.innerWidth > 1500) {
+//         document.body.classList.add('index-body');
+//     }
+// };
 
 
+function checkScreenWidth() {
+    if (window.innerWidth > 1800) {
+        document.body.classList.add('index-body');
+    } else {
+        document.body.classList.remove('index-body');
+    }
+}
+
+window.onload = checkScreenWidth;
+
+window.onresize = checkScreenWidth;
 
 
 
@@ -361,3 +377,86 @@ document.querySelectorAll('.new__btns button').forEach(button => {
         button.classList.toggle('active');
     });
 });
+
+
+
+
+
+
+
+
+// Аккордеон
+function accordion() {
+    const items = document.querySelectorAll('.accordion__item-trigger')
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentNode
+            if (parent.classList.contains('accordion__item-active')) {
+                parent.classList.remove('accordion__item-active')
+            } else {
+                document
+                    .querySelectorAll('.accordion__item')
+                    .forEach(child => child.classList.remove('accordion__item-active'))
+                parent.classList.add('accordion__item-active')
+            }
+        })
+    })
+}
+accordion()
+
+
+
+
+// TYPING TITLE
+document.addEventListener('DOMContentLoaded', function () {
+    const normalText = "Добро пожаловать в ";
+    const highlightText = "Thompson School";
+
+    const normalElement = document.getElementById('normal-text');
+    const highlightElement = document.getElementById('highlight');
+
+    let index = 0;
+    let currentNormalText = "";
+    let highlightIndex = 0;
+    let currentHighlightText = "";
+    let isDeleting = false;  // Флаг для режима удаления
+    let delay = 100;  // Задержка между символами
+
+    function type() {
+        if (!isDeleting) {
+            // Эффект печати
+            if (index < normalText.length) {
+                currentNormalText += normalText[index];
+                normalElement.innerHTML = currentNormalText;
+                index++;
+            } else if (highlightIndex < highlightText.length) {
+                currentHighlightText += highlightText[highlightIndex];
+                highlightElement.innerHTML = currentHighlightText;
+                highlightIndex++;
+            } else {
+                // Завершение печати, пауза перед удалением
+                setTimeout(() => isDeleting = true, 1000);
+            }
+        } else {
+            // Эффект удаления
+            if (highlightIndex > 0) {
+                currentHighlightText = currentHighlightText.substring(0, highlightIndex - 1);
+                highlightElement.innerHTML = currentHighlightText;
+                highlightIndex--;
+            } else if (index > 0) {
+                currentNormalText = currentNormalText.substring(0, index - 1);
+                normalElement.innerHTML = currentNormalText;
+                index--;
+            } else {
+                // Завершение удаления, пауза перед началом печати
+                setTimeout(() => isDeleting = false, 1000);
+            }
+        }
+
+        setTimeout(type, delay);
+    }
+
+    type();  // Запуск функции
+});
+
+
